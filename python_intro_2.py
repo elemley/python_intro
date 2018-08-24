@@ -23,33 +23,51 @@ print("test")
 
 #Below is a function definition
 def main():
-    #Notice the indentations... these are used in python rather than things like { }
-    print("test")
-    #Note the above line may or may not be executed
 
     #define a variable
     integer1 = 2
-    print(integer1)
 
     float1 = 1.0
-    print(float1)
-    print("%5.2f" % float1)
-
-    tmp = float1/integer1
 
     integer2 = 3
-    print(tmp)
-    print(integer1/integer2)
 
     print((int)(integer1/integer2))
 
     float2 = 3.0
-    test = float1/float2 - 1e-12*float1/float2/1e-12
-    print(test)
 
     #do a calculation
-    #test2 = pow(float2,3.0)
-    #print(test2)
+    test2 = pow(float2,3.0)
+    print(test2)
+
+    print(pow(27,1/3))
+
+    #can also use ** for exponentiation
+    print(27**(1/3))
+
+    #parentheses are evaluated first
+    print((1+1)**(5-2))
+
+    #exponentiation is always done next
+    print(2**1+1)
+    print(3*1**3)
+
+    #multiplication and division are always before addition/subtraction
+    print(2*3-1)
+    print(5-2*2)
+    #mult. and div. have same level of precedence - they are done left to right
+    #add. and subtract. have same level of precedence - they are done left to right
+
+    #Some different operators
+    
+
+
+
+    print(16-2*5)
+
+
+
+
+
 """
     #do some logic
     if(integer1>integer2):
