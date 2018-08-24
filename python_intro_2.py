@@ -18,7 +18,6 @@ from time_step_scrolling import *
 """
 #The following is a sort of "global" area this code will execute first and will always execute
 
-
 print("test")
 
 #Below is a function definition
@@ -44,54 +43,60 @@ def main():
     #can also use ** for exponentiation
     print(27**(1/3))
 
+    # Operators:
+        # + - * / // %
+        # + = addition
+        # - = subtraction
+        # * = multiplication
+        # / = division
+        # // = floor division (performs integer division -- 3/4 = 0, 4/3 = 1
+        # % = modulus -- divides and returns the remainder -- 3%4 = 3 --- 10%3 = 1
+
     #parentheses are evaluated first
     print((1+1)**(5-2))
 
     #exponentiation is always done next
     print(2**1+1)
     print(3*1**3)
+    #when you have two or more exponentiations they go right to left
 
     #multiplication and division are always before addition/subtraction
-    print(2*3-1)
-    print(5-2*2)
+    print(2*3-1)    #what will the answer be??
+    print(5-2*2)    #what will the answer be??
+
     #mult. and div. have same level of precedence - they are done left to right
     #add. and subtract. have same level of precedence - they are done left to right
 
-    #Some different operators
-    
 
+    print(16-2*5)       #what will the answer be??
+    print(2**2**3*3)       #what will the answer be??
 
+    #math library functions
+    print(pi)
+    print(sin(pi/2))
+    print(cos(pi/4))
+    print(2*asin(1))
+    print(tan(pi/4))
+    print(exp(1))
+    print(e)
+    print(log10(100))
+    print(log(1.0,exp(1)))
+    print(log(1.0))
+    print(sqrt(25))
 
-    print(16-2*5)
+    #get log of 1+x with log1p(x)
+    tmp = 1e-100 + 1
+    print(log(tmp))
+    print(log1p(1e-100))
 
-
-
-
-
-"""
-    #do some logic
-    if(integer1>integer2):
-     #   print("%d is larger than %d" % integer1, integer2)
-    #else:
-    #    print("%d is larger than %d" % (integer2, integer1))
-
-    if(float2 > float1 and integer2 > integer1):
-#        print("%d is larger than %d and %3.2f is larger than %3.2f" % (integer2, integer1,float2,float1))
-
-    if(integer1<integer2):
- #       print("%d is smaller than %d" % (integer1, integer2))
-    elif(float1<float2):
-  #      print("%3.2f is smaller than %3.2f" % (float1, float2))
-    else:
-        "None of the above"
-
-"""
-
+    print(sin(radians(270)))
+    print(degrees(atan(1.0)))
+    print(cosh(0), sinh(0))
+    print(erf(1.0))
 
 
 
 
-    #do a loop
 
 
 

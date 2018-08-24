@@ -47,33 +47,6 @@ def main():
     test = float1/float2 - 1e-12*float1/float2/1e-12
     print(test)
 
-    #do a calculation
-    #test2 = pow(float2,3.0)
-    #print(test2)
-"""
-    #do some logic
-    if(integer1>integer2):
-     #   print("%d is larger than %d" % integer1, integer2)
-    #else:
-    #    print("%d is larger than %d" % (integer2, integer1))
-
-    if(float2 > float1 and integer2 > integer1):
-#        print("%d is larger than %d and %3.2f is larger than %3.2f" % (integer2, integer1,float2,float1))
-
-    if(integer1<integer2):
- #       print("%d is smaller than %d" % (integer1, integer2))
-    elif(float1<float2):
-  #      print("%3.2f is smaller than %3.2f" % (float1, float2))
-    else:
-        "None of the above"
-
-"""
-
-
-
-
-
-    #do a loop
 
 
 
