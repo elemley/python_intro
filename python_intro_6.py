@@ -82,27 +82,33 @@ def main():
 
 
     #loops can be nested
-    listoflists = [ [1, 3, 5], ]
+    listoflists = [ [1, 3, 5], [-7,2,4]]
+    for i in range(0,2):
+        for j in range(0,3):
+            print(listoflists[i][j])
 
+    #ENGR3703 as above make a list of lists where there are three lists within a list (each with 4 values)
+    #ENGR3703 Use a nested loop to print each item in the following order:
+    #ENGR3703 The first item from the first list followed by the first item from the second list etc...
 
-
-
-
+    nums2=[]
+    #make a list as you go
     for i in range(0,10):
-        #print(i)
-        nums.append((i+1)**i)   #This is how you add items to a list
+        nums2.append((i+1)**i)   #This is how you add items to a list
 
-    #print(nums)
+    print(nums2)
 
-    num = 100
-    #while(num > 1.1):
-    #   num-=1
-    #  print(num)
-
-    #for i in nums:
-        #print(i)
+    #ENGR3703 make a new empty list with x values: (0, 0.5, 1, 1.5, 2.0)
+    #ENGR3703 use a for loop to make another list called y that consists of exp(x) of each of the x vals.
 
 
+    minimum = 5.2
+    num = 1.1*minimum
+    while num > minimum:
+        num-=0.02
+        print(num)
+
+    #ENGR3703 Make your own while loop example
 
 
 
