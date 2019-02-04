@@ -10,18 +10,15 @@ import numpy as np
 """
 import time
 import matplotlib.pyplot as plt
-from matplotlib.colors import LinearSegmentedColormap
-from matplotlib import colors
 from psm_plot import *
 from random import *
+from matplotlib.colors import LinearSegmentedColormap
+from matplotlib import colors
 from time_step_scrolling import *
 """
 #The following is a sort of "global" area this code will execute first and will always execute
 
 
-print("test")
-
-#Below is a function definition
 def main():
     #Notice the indentations... these are used in python rather than things like { }
     print("test")
@@ -46,6 +43,9 @@ def main():
     float2 = 3.0
     test = float1/float2 - 1e-12*float1/float2/1e-12
     print(test)
+
+print("test")
+#Below is a function definition
 
 
 
