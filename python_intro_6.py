@@ -101,7 +101,7 @@ def main():
     #ENGR3703 make a new empty list with x values: (0, 0.5, 1, 1.5, 2.0)
     #ENGR3703 use a for loop to make another list called y that consists of exp(x) of each of the x vals.
 
-
+    #Given the flexibility of the for loop, you probably don't need a while loop
     minimum = 5.2
     num = 1.1*minimum
     while num > minimum:
@@ -110,6 +110,25 @@ def main():
 
     #ENGR3703 Make your own while loop example
 
+
+
+    #here's a more complicated while loop (common in comp. methods)
+    maxiter = 500
+    counter = 1
+    err_stop = 1e-2
+    err = 100*err_stop
+    while err > err_stop and counter < maxiter:
+        counter+=1
+        err*=.99
+    print(err,counter)
+
+    #this loop can be achieved with a for loop also
+    err=100*err_stop
+    for counter in range(0,maxiter):
+        if err <=err_stop:
+            break
+        err*=.99
+    print(err,counter+1)
 
 
 if __name__ == '__main__':
