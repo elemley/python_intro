@@ -8,7 +8,9 @@ import numpy as np
 
 #The following area is a sort of "global" area this code will execute first and will always execute
 
-#Below is a function definition
+#Below is a function definition for the main function. This function is meant to hold the code
+#that will run every time thhis python code file is executed
+#you do have to do something special to make sure it runs though... see the end of the file
 def main():
 
     #now we will learn to take our knowledge of loops to the next level
@@ -84,7 +86,8 @@ def main():
 
 
 
-
+#please just leave this and don't change it...
+#these next two lines make sure main() runs everytime this code file is executed
 if __name__ == '__main__':
     main()
 
