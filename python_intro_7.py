@@ -6,30 +6,6 @@
 from math import *
 import numpy as np
 
-def fprime(x,k):
-    if k== 0:
-        return sin(x)
-    elif k==1:
-        return cos(x)
-    elif k==2:
-        return -sin(x)
-    elif k==3:
-        return -cos(x)
-
-
-
-
-    #set up k
-    k = (i+4) % 4
-
-    term = fprime(x,k)
-
-
-
-
-
-
-
 #The following area is a sort of "global" area this code will execute first and will always execute
 
 #Below is a function definition for the main function. This function is meant to hold the code
