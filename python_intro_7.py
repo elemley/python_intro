@@ -6,6 +6,30 @@
 from math import *
 import numpy as np
 
+def fprime(x,k):
+    if k== 0:
+        return sin(x)
+    elif k==1:
+        return cos(x)
+    elif k==2:
+        return -sin(x)
+    elif k==3:
+        return -cos(x)
+
+
+
+
+    #set up k
+    k = (i+4) % 4
+
+    term = fprime(x,k)
+
+
+
+
+
+
+
 #The following area is a sort of "global" area this code will execute first and will always execute
 
 #Below is a function definition for the main function. This function is meant to hold the code
@@ -66,7 +90,7 @@ def main():
     max_iter = 1000                 #set a max number of iterations
     x = 1                           #argument of function in Eq. 4
     for i in range(0,max_iter):     #for loop that will execute max_iter times unless there is a 'break'
-        f+=pow(x,i)/factorial(i)    #here we have to use i+1 since i is being used in the calculation
+        f=f+pow(x,i)/factorial(i)    #here we have to use i+1 since i is being used in the calculation
         if i > 0:                   #calc rel_err for all iterations but the first
             rel_err = abs((f-f_old)/f)      #calc rel_err
             if rel_err <= err_stop:         #is rel_err less than the err_stop
