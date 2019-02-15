@@ -16,6 +16,8 @@ def main():
     #now we will learn to take our knowledge of loops to the next level
     #there are some very common problems in comp. methods
 
+
+
     #NOTE: All equations referenced below are in the document sums_and_products.pdf
 
     #Summations

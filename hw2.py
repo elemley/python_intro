@@ -35,7 +35,6 @@ def main():
         if true_err <= err_stop:         #is rel_err less than the err_stop
             print(fapprx, i+1, true_err)
             break                       #if it is less then stop iterating
-
         print(fapprx,i+1,true_err)
 
 
