@@ -34,6 +34,20 @@ def main():
     # ENGR3703 Below is the data you should use
     x = [3, 2, 4, 4, 3, 3, 2, 3, 4, 3, 3, 3, 2, 4]
 
+    summ = 0
+    n = len(x)  # get length of list
+    for i in range(0, n):  # first list index is 0... so the i in the equation we are trying to calc.
+        summ += x[i]  # This loop will execute for i values of 0-5, which correspond to
+    mean = summ/n
+    print("Mean value = ",mean)
+    dev = 0
+    for i in range(0, n):  # first list index is 0... so the i in the equation we are trying to calc.
+        dev += (x[i] - mean)**2  # This loop will execute for i values of 0-5, which correspond to
+    stdev = sqrt(dev/(n-1))
+    print("Std. Dev. = ",stdev)
+
+
+
     ##########################################Your code here
 
     # here is an example summation from eq. 2:
@@ -60,17 +74,25 @@ def main():
     rel_err = 1.1 * err_stop  # initially make sure rel_err is defined to be more than the err_stop
     max_iter = 1000  # set a max number of iterations
     x = 1  # argument of function in Eq. 4
+    f_string = "f"
+    i_string = "i"
+    rel_err_string = "rel err"
+    f_string_width = 11
+    i_string_width = 2
+    rel_err_string_width = 9
+    print(i_string.center(i_string_width),f_string.center(f_string_width), rel_err_string.center(rel_err_string_width))
     for i in range(0, max_iter):  # for loop that will execute max_iter times unless there is a 'break'
         f = f + pow(x, i) / factorial(i)  # here we have to use i+1 since i is being used in the calculation
         if i > 0:  # calc rel_err for all iterations but the first
             rel_err = abs((f - f_old) / f)  # calc rel_err
             if rel_err <= err_stop:  # is rel_err less than the err_stop
-                print(f, i + 1, rel_err)
+                print("%d %1.10wf  %1.3e" % (i+1,f, rel_err))
                 break  # if it is less then stop iterating
             else:  # if rel_err is still > than err_stop place the current value of f in f_old
                 f_old = f  # the new value of f_old will be used in the next iteration
 
-        print(f, i + 1, rel_err)
+        print("%d %1.10f  %1.3e" % (i + 1, f, rel_err))
+        #print(f, i + 1, rel_err)
 
     # ENGR3703 Place your code here to find the result of Equation 6
     # ENGR3703 Your loop should continue until the relative error is less than 1e-6
