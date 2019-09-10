@@ -5,6 +5,7 @@
 # This will be present in every single program you write
 from math import *
 import numpy as np
+from tabulate import tabulate
 
 
 # The following area is a sort of "global" area this code will execute first and will always execute
@@ -70,29 +71,32 @@ def main():
     # The fractional relative error is defined in Eq. 5 (we will use rel_err in the code below)
     f = 0  # this is the function value we are calculating
     f_old = 0  # holding place for old value of f in iterations
-    err_stop = 1e-5  # this is what is called the stopping criterion
+    err_stop = 1e-9  # this is what is called the stopping criterion
     rel_err = 1.1 * err_stop  # initially make sure rel_err is defined to be more than the err_stop
     max_iter = 1000  # set a max number of iterations
     x = 1  # argument of function in Eq. 4
     f_string = "f"
     i_string = "i"
     rel_err_string = "rel err"
-    f_string_width = 11
-    i_string_width = 2
-    rel_err_string_width = 9
-    print(i_string.center(i_string_width),f_string.center(f_string_width), rel_err_string.center(rel_err_string_width))
+    table = [[i_string,f_string,rel_err_string]]
+
     for i in range(0, max_iter):  # for loop that will execute max_iter times unless there is a 'break'
         f = f + pow(x, i) / factorial(i)  # here we have to use i+1 since i is being used in the calculation
         if i > 0:  # calc rel_err for all iterations but the first
             rel_err = abs((f - f_old) / f)  # calc rel_err
             if rel_err <= err_stop:  # is rel_err less than the err_stop
-                print("%d %1.10wf  %1.3e" % (i+1,f, rel_err))
+                #print("%d %1.10wf  %1.3e" % (i+1,f, rel_err))
+                table.append([i,f,rel_err])
                 break  # if it is less then stop iterating
             else:  # if rel_err is still > than err_stop place the current value of f in f_old
                 f_old = f  # the new value of f_old will be used in the next iteration
-
-        print("%d %1.10f  %1.3e" % (i + 1, f, rel_err))
+            table.append([i, f, rel_err])
+        else:
+            table.append([i, f, "NA"])
+        #print("%d %1.10f  %1.3e" % (i + 1, f, rel_err))
         #print(f, i + 1, rel_err)
+
+    print(tabulate(table))
 
     # ENGR3703 Place your code here to find the result of Equation 6
     # ENGR3703 Your loop should continue until the relative error is less than 1e-6
