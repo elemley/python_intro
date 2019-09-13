@@ -86,17 +86,18 @@ def main():
             rel_err = abs((f - f_old) / f)  # calc rel_err
             if rel_err <= err_stop:  # is rel_err less than the err_stop
                 #print("%d %1.10wf  %1.3e" % (i+1,f, rel_err))
-                table.append([i,f,rel_err])
+                #table.append([i,f,rel_err])
+                table.append([i + 1, f, f"{rel_err:.2e}"])
                 break  # if it is less then stop iterating
             else:  # if rel_err is still > than err_stop place the current value of f in f_old
                 f_old = f  # the new value of f_old will be used in the next iteration
-            table.append([i, f, rel_err])
+            table.append([i + 1, f, f"{rel_err:.2e}"])
         else:
-            table.append([i, f, "NA"])
+            table.append([i+1, f, "NA"])
         #print("%d %1.10f  %1.3e" % (i + 1, f, rel_err))
         #print(f, i + 1, rel_err)
 
-    print(tabulate(table))
+    print(tabulate(table,tablefmt="fancy_grid", headers="firstrow"))
 
     # ENGR3703 Place your code here to find the result of Equation 6
     # ENGR3703 Your loop should continue until the relative error is less than 1e-6
