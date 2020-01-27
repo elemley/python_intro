@@ -21,6 +21,7 @@ def main():
     # Notice the indentations... these are used in python rather than things like { }
     print("test")
     # Note the above line may or may not be executed
+    print("test2")
 
     # define a variable
     integer1 = 2
