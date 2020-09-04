@@ -13,6 +13,9 @@ import matplotlib.pyplot as plt
 from psm_plot import *
 """
 
+#I need something called python.exe (interpreter)
+#I also need other stuff to do more calcs and things like that (numpy)
+#The two line above together are the environment
 
 # The following is a sort of "global" area this code will execute first and will always execute
 
@@ -20,7 +23,6 @@ from psm_plot import *
 def main():
     # Notice the indentations... these are used in python rather than things like { }
     print("test")
-    # Note the above line may or may not be executed
     print("test2")
 
     # define a variable
@@ -40,7 +42,8 @@ def main():
     print((int)(integer1 / integer2))
 
     float2 = 3.0
-    test = float1 / float2 - 1e-12 * float1 / float2 / 1e-12
+    print(float1/float2)
+    test = float1 / float2 - (1e-7 * float1 / float2 / 1e-7)
     print(test)
 
 

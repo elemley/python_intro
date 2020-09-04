@@ -33,9 +33,9 @@ def main():
 
     # ENGR3703 make a list of 4 strings
 
-    # ENGR3703 Determine if one of the strings that really is there - is there and print a message
+    # ENGR3703 Determine if one of the strings that really is there - if so print a message
 
-    # ENGR3703 Determine if one of the strings that really is NOT there - is there and print a message
+    # ENGR3703 Determine if one of the strings that really is NOT there - if it's not there print a message
 
     # Function to get length (number of items) in a list "len"
     print(len(strings))
